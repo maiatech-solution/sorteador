@@ -1,0 +1,86 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+
+body{
+    background-image: radial-gradient( #47070f, rgb(0, 0, 0) );
+}
+
+/*Container */
+.container{
+    width: 100%;
+    
+}
+
+/* Título */
+.container .title{
+    width: 100%;
+    color: rgb(255, 255, 255);
+    border-top: rgb(255, 255, 255) 1px solid;
+    border-bottom: rgb(255, 255, 255) 1px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom:50px;
+    margin-top: 50px;
+}
+
+
+.but-embaralhar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container .but-embaralhar input{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    width: 225px;
+    height: 40px;
+    background-image: radial-gradient(  rgb(20, 7, 18), rgb(0, 0, 0) );
+    font-size: 25px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 8px;
+    
+}
+
+.sort-num {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container .sort-num input{
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.text-area{
+    display: flex;
+}
+
+.text-area textarea{
+    width: 900px;
+    height: 200px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+
+/* Roda pé */
+footer{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}

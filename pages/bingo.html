@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/bingo_style.css">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <title>Bingo Online</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="title">
+            <i class="em em-joystick" aria-role="presentation" aria-label=""></i>
+            <h1>Bingo Online</h1>
+            <i class="em em-joystick" aria-role="presentation" aria-label=""></i>
+        </div>
+
+        <div class="but-embaralhar">
+            <input id="but-emb" type="button" value="Pedra de número: " readonly onclick="sorteio()">
+        </div>
+
+        <div class="sort-num">
+            <input type="text" name="result" id="result" value="" readonly >
+        </div>
+
+        <div class="text-area">
+            <textarea name="tex_area" id="text_area" readonly ></textarea>
+        </div>
+ 
+    </div>
+    
+    <footer>
+        <h5><i>MaiaTech Solutions</i></h5>
+    </footer>
+
+      <script>
+        let lista_de_quem_foi_sorteado = []; // lista vazia
+        let lista_geral = [] // lista vazia
+        
+            for (i=1; i <= 75; i++){ // criação do array com 75 pedras
+                lista_geral.push(i);
+            }
+        
+        function sorteio(){
+
+            let num_sorteado = (lista_geral[Math.floor(Math.random() * lista_geral.length)]); // Sorteando número aleatório de dentro da lista geral
+            console.log("Número sorteado: "+num_sorteado);
+
+            if (lista_de_quem_foi_sorteado.indexOf(num_sorteado) === -1){ //1º - verifica se o numero sorteado está na lista de que já foi sorteado
+                lista_de_quem_foi_sorteado.push(num_sorteado); // se não tiver ele adiciona esse numero sorteado na lista de quem já foi sorteado
+                //console.log("Lista de quem já foi sorteado: "+lista_de_quem_foi_sorteado); 
+                document.getElementById("result").value=num_sorteado; // mostra o numero sorteado na tela do input
+                let indice_localizado = lista_geral.indexOf(num_sorteado); // localiza o indice do numero sorteado na lista geral e salva na variável criada
+                //console.log("Indice localizado: "+indice_localizado)
+                if(indice_localizado > -1){ // 2º verifica se o indice localizado está presente 
+                    lista_geral.splice(indice_localizado,1) // se estiver ele remove da lista geral pelo indice
+                    //console.log("Lista dos que faltam chamar: "+lista_geral);
+                }
+                if(num_sorteado == undefined){ // 3º verifica se todas as pedras foram chamadas
+                    alert("Fim de jogo") // Fim de jogo
+                    document.getElementById("result").value=0;
+                }
+            }
+            document.getElementById("text_area").value=lista_de_quem_foi_sorteado.sort((a, b) => a - b); // Mostra na tela os números chamados em ordem crescente
+        }
+    </script>
+
+
+    
+</body>
+</html>
