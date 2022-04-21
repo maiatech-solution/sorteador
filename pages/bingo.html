@@ -31,11 +31,12 @@
         </div>
 
         <div class="anterior-num">
+            <span>Pedra anterior: </span>
             <input type="text" name="anterior" id="anterior" value="" readonly>
         </div>
 
         <div class="but-refresh">
-            <input id="refresh" type="button" id="recomecar" value="" readonly>
+            <input id="refresh" type="button" id="recomecar" value="Recomeçar" readonly>
         </div>
 
     </div>
@@ -46,7 +47,7 @@
 
     <script>
         let lista_de_quem_foi_sorteado = []; // lista vazia
-        let lista_nao_ordenada= []; // lista vazia
+        let lista_nao_ordenada = []; // lista vazia
         let lista_geral = [] // lista vazia
 
         for (i = 1; i <= 75; i++) { // criação do array com 75 pedras
@@ -66,6 +67,9 @@
                 //console.log("Lista de quem já foi sorteado: "+lista_de_quem_foi_sorteado); 
                 document.getElementById("result").value = num_sorteado; // mostra o numero sorteado na tela do input
                 document.getElementById("anterior").value = anterior;
+                if(anterior === undefined){
+                    document.getElementById("anterior").value = 0;
+                }
                 let indice_localizado = lista_geral.indexOf(num_sorteado); // localiza o indice do numero sorteado na lista geral e salva na variável criada
                 //console.log("Indice localizado: "+indice_localizado)
                 if (indice_localizado > -1) { // 2º verifica se o indice localizado está presente 
@@ -79,6 +83,14 @@
             }
             document.getElementById("text_area").value = lista_de_quem_foi_sorteado.sort((a, b) => a - b); // Mostra na tela os números chamados em ordem crescente
         }
+
+        var btn = document.querySelector("#refresh");
+
+        btn.addEventListener("click", function () {
+
+            location.reload();
+
+        });
     </script>
 
 

@@ -47,6 +47,25 @@ body{
     
 }
 
+.but-refresh{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container .but-refresh input{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(   rgb(0, 0, 0),rgb(20, 7, 18) );
+    font-size: 25px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-size: .8rem;
+    
+}
+
 .sort-num {
     width: 100%;
     display: flex;
@@ -59,6 +78,27 @@ body{
     width: 80px;
     height: 80px;
     font-size: 50px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.anterior-num {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.anterior-num span{
+    color: white;
+}
+
+.container .anterior-num input{
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
     text-align: center;
     border-radius: 50px;
 }
