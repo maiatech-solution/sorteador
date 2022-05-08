@@ -4,7 +4,9 @@
 
 
 body{
-    background-image: radial-gradient( #47070f, rgb(0, 0, 0) );
+    /* dia das mães*/
+    background-image: radial-gradient( pink, rgb(165, 0, 115));
+    /*background-image: radial-gradient( #47070f, rgb(0, 0, 0) ); padrão*/
 }
 
 /*Container */
@@ -35,11 +37,12 @@ body{
     justify-content: center;
 }
 .container .but-embaralhar input{
-    color: rgb(255, 255, 255);
+    color: pink;
     text-decoration: none;
     width: 225px;
     height: 40px;
-    background-image: radial-gradient(  rgb(20, 7, 18), rgb(0, 0, 0) );
+    background-color: rgba(94, 85, 85, 0.705);
+    /*background-image: radial-gradient(  rgb(20, 7, 18), rgb(0, 0, 0) ); padrão*/
     font-size: 25px;
     cursor: pointer;
     border: 1px solid white;
@@ -52,15 +55,17 @@ body{
     display: flex;
     justify-content: center;
 }
+
 .container .but-refresh input{
-    color: rgb(255, 255, 255);
     text-decoration: none;
     width: 100px;
     height: 30px;
-    background-image: radial-gradient(   rgb(0, 0, 0),rgb(20, 7, 18) );
+    background-color: rgba(94, 85, 85, 0.705);
+    color: pink;
+    /*background-image: radial-gradient(   rgb(0, 0, 0),rgb(20, 7, 18) ); padrão*/
     font-size: 25px;
     cursor: pointer;
-    border: 1px solid white;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 8px;
     font-size: .8rem;
     
@@ -74,13 +79,16 @@ body{
     margin-bottom: 20px;
 }
 
-.container .sort-num input{
+.container .sort-num input {
     width: 80px;
     height: 80px;
     font-size: 50px;
     text-align: center;
     border-radius: 50px;
+    background-color: rgba(94, 85, 85, 0.705);
+    color: pink;
 }
+
 
 .anterior-num {
     width: 100%;
@@ -89,10 +97,12 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
     align-items: center;
+    gap: 10px;
 }
 
 .anterior-num span{
-    color: white;
+    color: rgba(0, 0, 0, 0.705);
+    font-weight: bolder;
 }
 
 .container .anterior-num input{
@@ -101,6 +111,8 @@ body{
     font-size: 25px;
     text-align: center;
     border-radius: 50px;
+    background-color: rgba(94, 85, 85, 0.705);
+    color: pink;
 }
 
 .text-area{
@@ -114,6 +126,8 @@ body{
     padding: 5px;
     margin: 0 auto;
     font-size: 25px;
+    background-color: rgba(94, 85, 85, 0.705);
+    color: pink;
 }
 
 
@@ -123,4 +137,6 @@ footer{
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    align-items: center;
+    flex-direction: column;
 }
