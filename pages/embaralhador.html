@@ -34,20 +34,20 @@
     
     <script>
         
-        let lista_de_quem_foi_sorteada = [];
+        var lista_de_quem_foi_sorteada = [];
         
         function embaralhar(){
-            let qntd_num = window.document.getElementById("inp-num").value;
-            let text_area = window.document.getElementById("emb").value;
+            var qntd_num = window.document.getElementById("inp-num").value;
+            var text_area = window.document.getElementById("emb").value;
             
-            let lista_sorteio_da_vez = new Array; // Array vazio
+            var lista_sorteio_da_vez = new Array; // Array vazio
             i = 0;
             
-            let lista_geral = text_area.split("\n"); // Array criado por enters
+            var lista_geral = text_area.split("\n"); // Array criado por enters
             console.log("Array dividido por ENTER: "+lista_geral)
             
             while ( i < qntd_num){
-                let nome_sorteado = (lista_geral[Math.floor(Math.random() * lista_geral.length)]); // Sortea um nome aleatório da lista
+                var nome_sorteado = (lista_geral[Math.floor(Math.random() * lista_geral.length)]); // Sortea um nome aleatório da lista
                 console.log("Nome sorteado: "+nome_sorteado)
                 if(lista_de_quem_foi_sorteada.indexOf(nome_sorteado) === -1){ //verifica se o nome sorteado não está na lista de quem foi sorteado
                     lista_sorteio_da_vez.push(nome_sorteado); // se não estiver, adiciona o nome na lista
