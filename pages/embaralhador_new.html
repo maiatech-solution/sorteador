@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilos/style.css">
-    <link rel="stylesheet" href="../estilos/style_emb.css">
+    <link rel="stylesheet" href="../estilos/style_emb_new.css">
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-    <title>Embaralhador</title>
+    <title>Seleção de times</title>
 </head>
 
 <body>
-    <div class="container" id="container">
+    <div class="container">
         <div class="title">
             <i class="em em-joystick" aria-role="presentation" aria-label=""></i>
-            <h1>Embaralhador de nomes</h1>
+            <h1>Sorteio dos times</h1>
             <i class="em em-joystick" aria-role="presentation" aria-label=""></i>
         </div>
-
+        
         <div class="textA">
             <textarea name="emb" id="emb" placeholder="Um nome em cada linha... "></textarea>
         </div>
@@ -27,57 +26,74 @@
             <input id="but-emb" type="button" value="Embaralhar Itens" onclick="embaralhar()">
         </div>
 
+        
+        <div class="times" id="time" style="display: none;">
+            <div class="times_class">
+                <label for="time1">Time 1</label>
+                <textarea name="time1" id="time1" readonly style="max-height: 150px; min-height: 150px; max-width:200px; min-width:200px;"></textarea>
+            </div>
+            <div class="times_class">
+                <label for="time2">Time 2</label>
+                <textarea name="time2" id="time2" readonly style="max-height: 150px; min-height: 150px; max-width:200px; min-width:200px;"></textarea>
+            </div class="times_class">
+            <div>
+                <label for="time3">Time 3</label>
+                <textarea name="time3" id="time3" readonly style="max-height: 150px; min-height: 150px; max-width:200px; min-width:200px;"></textarea>
+            </div>
+        </div>
+        
         <div class="but-embaralhar">
             <button id="refresh">Novo sorteio</button>
         </div>
 
     </div>
-
-    <script>
-
-        var lista_de_quem_foi_sorteada = [];
-
-        function embaralhar() {
-            var qntd_num = window.document.getElementById("inp-num").value;
-            var text_area = window.document.getElementById("emb").value;
-            var lista_sorteio_da_vez = new Array; // Array vazio
-            var time1 = [];
-            var time2 = [];
-            var time3 = [];
-
-            var lista_geral = text_area.split("\n"); // Array criado por enters
-            console.log("Array dividido por ENTER: " + lista_geral)
-
-
-            function shuffle(o) {
-                for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-                return o;
-            }
     
-            var lista_geral = text_area.split("\n");
-            lista_embaralhada = shuffle(lista_geral);
-
-            time1 = lista_embaralhada.slice(0,5);
-            console.log("time1: "+time1);
-            time2 = lista_embaralhada.slice(5,10)
-            console.log("time2: "+time2);
-            time3 = lista_embaralhada.slice(10,15)
-            console.log("time3: "+time3);
-        }
-
-
-        var btn = document.querySelector("#refresh");
-        btn.addEventListener("click", function () {
-
-            location.reload();
-        });
-
-    </script>
-
-
+    
+    
     <footer>
+        <p>Utilizado apenas em Futs que tem 15 jogadores com 5 membros em cada time.</p>
         <h5><i>MaiaTech Solutions</i></h5>
     </footer>
 </body>
 
+        <script>
+            function embaralhar() {
+                document.getElementById("time").style.display='flex';
+                var text_area = window.document.getElementById("emb").value;
+                var time1 = [];
+                var time2 = [];
+                var time3 = [];
+    
+                var lista_geral = text_area.split("\n"); // Array criado por enters
+                console.log("Array dividido por ENTER: " + lista_geral)
+    
+    
+                function shuffle(o) {
+                    for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+                    return o;
+                }
+        
+                var lista_geral = text_area.split("\n");
+                lista_embaralhada = shuffle(lista_geral);
+    
+                time1 = lista_embaralhada.slice(0,5);
+                console.log("time1: "+time1);
+                time2 = lista_embaralhada.slice(5,10)
+                console.log("time2: "+time2);
+                time3 = lista_embaralhada.slice(10,15)
+                console.log("time3: "+time3);
+    
+                document.getElementById('time1').innerHTML = time1;
+                document.getElementById('time2').innerHTML = time2;
+                document.getElementById('time3').innerHTML = time3;
+            }
+    
+    
+            var btn = document.querySelector("#refresh");
+            btn.addEventListener("click", function () {
+    
+                location.reload();
+            });
+    
+        </script>
 </html>

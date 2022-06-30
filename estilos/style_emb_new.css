@@ -1,33 +1,40 @@
 *{
     margin: 0; padding: 0; box-sizing: border-box;
 }
+
 body{
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient( rgb(0, 0, 0), rgb(31, 102, 17));
+    background-color: rgb(100, 120, 117);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
 
 /*Container */
 .container{
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     width: 600px;
-    height: 500px;
     flex-wrap: nowrap;
 }
 
 /* Título */
 .container .title{
-    width: 440px;
+    width: 400px;
+    color: rgb(255, 255, 255);
+    border-bottom: rgb(255, 255, 255) 1px solid;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 /* TextArea */
@@ -37,12 +44,13 @@ body{
     display: flex;
     justify-content: center;
 }
+
 .container .textA textarea{
     min-width: 440px;
     max-width: 440px;
     max-height: 250px;
     min-height: 250px;
-    border: rgb(31, 102, 17) 2px solid;
+    padding: 4px;
     
 }
 
@@ -67,6 +75,7 @@ body{
 .container input{
     width: 50px;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 /* Quantidade botão input*/
@@ -77,24 +86,65 @@ body{
     font-size: 25px;
     cursor: pointer;
     border-radius: 8px;
-    background-color: green;
+    background-color: gray;
     color: white;
-    border: none;
+    border: white 1px solid;
 }
 
 .container .but-embaralhar input:hover{
     background-color: white;
-    color: green;
+    color: gray;
+    border: 1px solid gray;
 }
 
 #refresh{
     background-color: white;
-    color:green;
     width: 100px;
     height: 30px;
     border: none;
     border-radius: 10px;
 }
+
+#refresh:hover{
+    background-color: gray;
+    color: white;
+    border: 1px solid white;
+}
+
+.times{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.times textarea{
+    height:150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.times label{
+    color:white;
+}
+
+footer{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 
 @media screen and (max-width: 768px) {
     .container h1{
@@ -102,6 +152,16 @@ body{
     }
     .container p {
         font-size: 16px;
+    }
+    .times{
+        flex-direction: column;
+    }
+    .times textarea{
+        height:50px;
+        width:400px;
+    }
+    footer{
+        width:70%;
     }
 }
 
