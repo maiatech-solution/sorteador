@@ -71,19 +71,29 @@ body{
 
 /* Quantidade botão input*/
 .container .but-embaralhar input{
-    color: rgb(255, 255, 255);
     text-decoration: none;
     width: 250px;
     height: 40px;
-    background-image: radial-gradient(rgb(31, 102, 17),rgb(0, 0, 0));
     font-size: 25px;
     cursor: pointer;
-    border: 1px solid white;
     border-radius: 8px;
+    background-color: green;
+    color: white;
+    border: none;
 }
 
 .container .but-embaralhar input:hover{
-    background-image: radial-gradient( rgb(0, 0, 0), rgb(31, 102, 17));
+    background-color: white;
+    color: green;
+}
+
+#refresh{
+    background-color: white;
+    color:green;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {
