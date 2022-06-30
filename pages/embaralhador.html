@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +9,6 @@
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
     <title>Embaralhador</title>
 </head>
-
 <body>
     <div class="container" id="container">
         <div class="title">
@@ -20,11 +18,11 @@
         </div>
 
         <div class="textA">
-            <textarea name="emb" id="emb" placeholder="Um nome em cada linha... "></textarea>
+            <textarea name="emb" id="emb" placeholder="Um nome em cada linha... " ></textarea>
         </div>
 
         <div class="quant">
-            <p>Selecione a quantidade de nomes que deseja sortear:</p>
+            <p>Selecione a quantidade de nomes que deseja sortear:</p> 
             <input type="number" name="inp-num" id="inp-num" placeholder="0">
         </div>
 
@@ -32,55 +30,42 @@
             <input id="but-emb" type="button" value="Embaralhar Itens" onclick="embaralhar()">
         </div>
 
-        <div class="but-embaralhar">
-        <button id="refresh">Novo sorteio</button>
     </div>
     
-    </div>
-
     <script>
-
-        var lista_de_quem_foi_sorteada = [];
-
-        function embaralhar() {
+        
+        let lista_de_quem_foi_sorteada = [];
+        
+        function embaralhar(){
             var qntd_num = window.document.getElementById("inp-num").value;
             var text_area = window.document.getElementById("emb").value;
+            
             var lista_sorteio_da_vez = new Array; // Array vazio
-
-            var i = 0;
-
+            i = 0;
+            
             var lista_geral = text_area.split("\n"); // Array criado por enters
-            console.log("Array dividido por ENTER: " + lista_geral)
-
-            while (i < qntd_num) {
+            console.log("Array dividido por ENTER: "+lista_geral)
+            
+            while ( i < qntd_num){
                 var nome_sorteado = (lista_geral[Math.floor(Math.random() * lista_geral.length)]); // Sortea um nome aleatório da lista
-                console.log("Nome sorteado: " + nome_sorteado)
-                if (lista_de_quem_foi_sorteada.indexOf(nome_sorteado) === -1) { //verifica se o nome sorteado não está na lista de quem foi sorteado
+                console.log("Nome sorteado: "+nome_sorteado)
+                if(lista_de_quem_foi_sorteada.indexOf(nome_sorteado) === -1){ //verifica se o nome sorteado não está na lista de quem foi sorteado
                     lista_sorteio_da_vez.push(nome_sorteado); // se não estiver, adiciona o nome na lista
-                    console.log("Lista sorteio da vez: " + lista_sorteio_da_vez)
+                    console.log("Lista sorteio da vez: "+lista_sorteio_da_vez)
                     lista_de_quem_foi_sorteada.push(nome_sorteado); // adiciona o nome na lista de quem já foi sorteado
-                    console.log("lista de quem já foi sorteado: " + lista_de_quem_foi_sorteada);
-                    i++; // contador    
+                    console.log("lista de quem já foi sorteado: "+lista_de_quem_foi_sorteada)
+                    i++; // contador
                 }
-
             }
-
-            confirm(`Grupo: ${'\n' + lista_sorteio_da_vez + '\n'}`); // mostra os nomes sorteados no confirm
+            confirm(`Grupo:  ${'\n' + lista_sorteio_da_vez}`); // mostra os nomes sorteados no confirm
             //console.log(lista_sorteio_da_vez)
         }
 
-        var btn = document.querySelector("#refresh");
-        btn.addEventListener("click", function () {
-
-            location.reload();
-        });
-
     </script>
 
-
+    
     <footer>
         <h5><i>MaiaTech Solutions</i></h5>
     </footer>
 </body>
-
 </html>

@@ -1,0 +1,119 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient( rgb(0, 0, 0), rgb(31, 102, 17));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Container */
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 600px;
+    height: 500px;
+    flex-wrap: nowrap;
+}
+
+/* Título */
+.container .title{
+    width: 440px;
+}
+
+/* TextArea */
+.container .textA{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.container .textA textarea{
+    min-width: 440px;
+    max-width: 440px;
+    max-height: 250px;
+    min-height: 250px;
+    border: rgb(31, 102, 17) 2px solid;
+    
+}
+
+/* Quantidade */
+.container .quant{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+/* Quantidade p */
+.container p{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+/* Quantidade input*/
+.container input{
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* Quantidade botão input*/
+.container .but-embaralhar input{
+    text-decoration: none;
+    width: 250px;
+    height: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+.container .but-embaralhar input:hover{
+    background-color: white;
+    color: green;
+}
+
+#refresh{
+    background-color: white;
+    color:green;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .container h1{
+        font-size: 1.5em;
+    }
+    .container p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container .textA{
+        width: 50%;
+        justify-content: center;
+    }
+    .container .textA textarea {
+        min-width: 100%;
+    }
+    .container p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/style_emb.css">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <title>Embaralhador</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="title">
+            <i class="em em-joystick" aria-role="presentation" aria-label=""></i>
+            <h1>Embaralhador de nomes</h1>
+            <i class="em em-joystick" aria-role="presentation" aria-label=""></i>
+        </div>
+
+        <div class="textA">
+            <textarea name="emb" id="emb" placeholder="Um nome em cada linha... "></textarea>
+        </div>
+
+        <div class="but-embaralhar">
+            <input id="but-emb" type="button" value="Embaralhar Itens" onclick="embaralhar()">
+        </div>
+
+        <div class="but-embaralhar">
+            <button id="refresh">Novo sorteio</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        var lista_de_quem_foi_sorteada = [];
+
+        function embaralhar() {
+            var qntd_num = window.document.getElementById("inp-num").value;
+            var text_area = window.document.getElementById("emb").value;
+            var lista_sorteio_da_vez = new Array; // Array vazio
+            var time1 = [];
+            var time2 = [];
+            var time3 = [];
+
+            var lista_geral = text_area.split("\n"); // Array criado por enters
+            console.log("Array dividido por ENTER: " + lista_geral)
+
+
+            function shuffle(o) {
+                for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+                return o;
+            }
+    
+            var lista_geral = text_area.split("\n");
+            lista_embaralhada = shuffle(lista_geral);
+
+            time1 = lista_embaralhada.slice(0,5);
+            console.log("time1: "+time1);
+            time2 = lista_embaralhada.slice(5,10)
+            console.log("time2: "+time2);
+            time3 = lista_embaralhada.slice(10,15)
+            console.log("time3: "+time3);
+        }
+
+
+        var btn = document.querySelector("#refresh");
+        btn.addEventListener("click", function () {
+
+            location.reload();
+        });
+
+    </script>
+
+
+    <footer>
+        <h5><i>MaiaTech Solutions</i></h5>
+    </footer>
+</body>
+
+</html>
