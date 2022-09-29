@@ -69,7 +69,7 @@
         var text_area = window.document.getElementById("emb").value;
         var time1 = [];
         var time2 = [];
-        var time3 = [];
+        var time3 = ["Tavi","ÉoGabi","Tiago","Pedro H", "Maia"];
 
         var lista_geral = text_area.split("\n"); // Array criado por enters
         console.log("Array dividido por ENTER: " + lista_geral)
@@ -80,19 +80,28 @@
             return o;
         }
 
+
         var lista_geral = text_area.split("\n");
+
+        //remover depois dee quinta
+        nova_lista = lista_geral.splice(10,14)
+        console.log("Lista editada "+nova_lista);
+        console.log("Lista geral "+lista_geral);
+
         lista_embaralhada = shuffle(lista_geral);
+        
+        
 
         time1 = lista_embaralhada.slice(0, 5);
         console.log("time1: " + time1);
         time2 = lista_embaralhada.slice(5, 10)
         console.log("time2: " + time2);
-        time3 = lista_embaralhada.slice(10, 15)
-        console.log("time3: " + time3);
+        //time3 = lista_embaralhada.slice(10, 15)
+        //console.log("time3: " + time3);
 
         document.getElementById('time1').innerHTML = time1;
         document.getElementById('time2').innerHTML = time2;
-        document.getElementById('time3').innerHTML = time3;
+        document.getElementById('time3').innerHTML = nova_lista;  //time3
     }
 
 
