@@ -81,7 +81,7 @@
         }
 
 
-        //remover depois de quinta
+        //remover depois de quinta - atual time 3
         nova_lista = lista_geral.splice(10, 14)
 
         lista_embaralhada = shuffle(lista_geral); // embaralhar lista geral
@@ -92,7 +92,7 @@
         time1 = lista_embaralhada.slice(0, 5); // separando array do time 1
         time2 = lista_embaralhada.slice(5, 10) // separando array do time 2
         //time3 = lista_embaralhada.slice(10, 15)  // separando array do time 3
-
+        
         document.getElementById('time1').innerHTML = time1
     
 
@@ -100,7 +100,7 @@
         document.getElementById('time3').innerHTML = lista_embaralhada_new;  //time3
     }
 
-    // -=-=-=-= atualziar page
+    // -=-=-=-= update page
 
     var btn = document.querySelector("#refresh");
 
