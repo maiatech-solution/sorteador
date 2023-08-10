@@ -17,9 +17,11 @@ body{
     text-align: center;
     align-items: center;
     flex-wrap: nowrap;
-    width: 600px;
+    height: 95vh;
     flex-wrap: nowrap;
     margin-bottom: 20px;
+    justify-content: center;
+    gap: 10px;
 }
 
 
@@ -43,7 +45,7 @@ body{
 
 /* logo */
 .logo-zueira{
-    width: 350px
+    width: 300px
 }
 
 /* Quantidade */
@@ -107,7 +109,7 @@ body{
     width: 100%;
     justify-content: center;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     flex-direction: row;
     gap: 10px;
     align-items: center;
