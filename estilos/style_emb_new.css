@@ -25,6 +25,11 @@ body{
 }
 
 
+#title-sort{
+    color: white;
+}
+
+
 
 /* TextArea */
 .container .textA{
@@ -45,7 +50,7 @@ body{
 
 /* logo */
 .logo-zueira{
-    width: 300px
+    width: 250px
 }
 
 /* Quantidade */
