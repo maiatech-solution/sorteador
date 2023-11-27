@@ -74,18 +74,18 @@
         }
 
         //panela para time 3
-        // nova_lista = lista_geral.splice(10, 14)
+        nova_lista = lista_geral.splice(10, 15) //comentar para sortear normal
 
         lista_embaralhada = shuffle(lista_geral); // embaralhar lista geral
-        // lista_embaralhada_new = shuffle(nova_lista) //embaralhar nova lsita
+        lista_embaralhada_new = shuffle(nova_lista) //embaralhar nova lista
 
         time1 = lista_embaralhada.slice(0, 5); // separando array do time 1
         time2 = lista_embaralhada.slice(5, 10); // separando array do time 2
-        time3 = lista_embaralhada.slice(10, 15);  // separando array do time 3
+        //time3 = lista_embaralhada.slice(10, 15);  // separando array do time 3
         
-        document.getElementById('time1').innerHTML = time1;
-        document.getElementById('time2').innerHTML = time2;
-        document.getElementById('time3').innerHTML = time3 ;  // lista_embaralhada_new
+        document.getElementById('time1').innerHTML = lista_embaralhada_new ;
+        document.getElementById('time2').innerHTML =  time1;
+        document.getElementById('time3').innerHTML = time2 ;  // time3
     }
 
         // -=-=-=-= update page
