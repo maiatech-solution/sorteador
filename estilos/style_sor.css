@@ -1,0 +1,116 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient( rgb(0, 0, 0), rgb(57, 48, 184));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Container */
+.container{
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Título */
+.container .title{
+    width: 400px;
+    color: rgb(255, 255, 255);
+    border-top: rgb(255, 255, 255) 1px solid;
+    border-bottom: rgb(255, 255, 255) 1px solid;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Inputs txt */
+.container .inputs-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 150px;
+    border-radius: 5px;
+    font-size: 20px;
+    justify-content: center;
+    gap: 20px;
+    border: 1px dashed white;
+    margin-bottom: 15px;
+}
+
+.container .inputs-txt input{
+    width: 45px;
+    height: 20px;
+}
+
+.container .inputs-txt label{
+    color: aliceblue;
+}
+
+/* Quantidade botão input*/
+.container .but-embaralhar input{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    width: 250px;
+    height: 40px;
+    background-image: radial-gradient(  rgb(57, 48, 184),rgb(0, 0, 0));
+    font-size: 25px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.container .but-embaralhar input:hover{
+    background-image: radial-gradient( rgb(0, 0, 0), rgb(57, 48, 184));
+}
+
+.container .sort-num{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    transition: width 2s;
+}
+
+.container .sort-num input{
+    width: 80px;
+    height: 100px;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 50px;
+    transition: all 1s;
+}
+
+/* Quantidade p */
+.container .sort-num p{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+
+/* Cabeçalho */
+footer{
+    margin-top: 50px;
+    color: white;
+}
+

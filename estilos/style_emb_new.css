@@ -1,0 +1,182 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Container */
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 95vh;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+#title-sort{
+    color: white;
+}
+
+
+
+/* TextArea */
+.container .textA{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container .textA textarea{
+    min-width: 440px;
+    max-width: 440px;
+    max-height: 250px;
+    min-height: 250px;
+    padding: 4px;
+    
+}
+
+/* logo */
+.logo-zueira{
+    width: 250px
+}
+
+/* Quantidade */
+.container .quant{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+/* Quantidade p */
+.container p{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+/* Quantidade botão input*/
+.container .but-embaralhar button{
+    text-decoration: none;
+    padding: 5px 7px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: gray;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    
+}
+
+.container .but-embaralhar button:hover{
+    background-color: white;
+    color: gray;
+    border: 1px solid gray;
+}
+
+#refresh{
+    background-color: white;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#refresh:hover{
+    background-color: gray;
+    color: white;
+    border: 1px solid white;
+}
+
+#frase{
+    font-size:12px;
+}
+
+.times{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.times textarea{
+    height:150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.times label{
+    color:white;
+}
+
+footer{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    color: black;
+    background-color:white;
+    width: 100vw;
+}
+
+.active{
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container h1{
+        font-size: 1.5em;
+    }
+    .container p {
+        font-size: 16px;
+    }
+    .times{
+        flex-direction: column;
+    }
+    .times textarea{
+        height:50px;
+        width:400px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container{
+        width: 100vw;
+    }
+    .container .textA{
+        width: 70%;
+        justify-content: center;
+    }
+    .container .textA textarea {
+        min-width: 100%;
+    }
+    .container p {
+        font-size: 10px;
+    }
+    #frase{
+        font-size:10px
+    }
+}
